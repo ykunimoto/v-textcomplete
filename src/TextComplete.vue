@@ -110,6 +110,7 @@ export default {
       this.textareaCalcStyle = calcTextareaHeight(this.$refs.textarea, minRows, maxRows)
     },
     updateValue: function (value) {
+      if (!this.$refs.textarea) return
       this.$refs.textarea.value = value
 
       this.$emit('input', value)
